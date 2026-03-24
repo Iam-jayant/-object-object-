@@ -1,0 +1,20 @@
+{
+  "manufacturers": {},
+  "sentReports": {},
+  "forumPosts": [
+    {
+      "id": "1774342776157-ojzlsf9j",
+      "wallet": "0x65c3768e98ee211a7589fe94c753e11cb8895069",
+      "content": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "imageHashes": [],
+      "createdAt": 1774342776157
+    },
+    {
+      "id": "1774342767863-y026nkj5",
+      "wallet": "0x65c3768e98ee211a7589fe94c753e11cb8895069",
+      "content": "This is a whistleblower experience post for testing.",
+      "imageHashes": [],
+      "createdAt": 1774342767863
+    }
+  ]
+}
