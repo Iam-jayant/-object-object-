@@ -6,10 +6,19 @@ const FORUM_API_URL = (
 ).trim();
 
 function getBaseUrl() {
-  if (!FORUM_API_URL) {
-    throw new Error('Forum API URL is not configured');
+  if (FORUM_API_URL) {
+    return FORUM_API_URL.replace(/\/$/, '');
   }
-  return FORUM_API_URL.replace(/\/$/, '');
+
+  // Local dev fallback when env vars are not set.
+  if (typeof window !== 'undefined') {
+    const host = window.location.hostname;
+    if (host === 'localhost' || host === '127.0.0.1') {
+      return 'http://localhost:8787/api';
+    }
+  }
+
+  return '/api';
 }
 
 export async function fetchForumPosts(limit = 50) {
