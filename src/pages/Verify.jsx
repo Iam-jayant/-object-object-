@@ -584,7 +584,7 @@ export default function Verify() {
   }, []);
 
   return (
-    <div className="w-full xl:w-[75%] mx-auto px-6 py-12">
+    <div className="w-full px-6 py-12">
       <div className="mb-8">
         <h1 className="section-title mb-1">{t('verify_title')}</h1>
         <p className="text-surface-400 text-sm">{t('verify_sub')}</p>

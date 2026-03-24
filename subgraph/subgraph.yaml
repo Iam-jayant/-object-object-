@@ -1,0 +1,36 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: MediProof
+    network: monad-testnet
+    source:
+      address: "0x25AFF36c150E8D4628BFE1d068B1a1BD6098243b"
+      abi: MediProof
+      startBlock: 20852119
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Batch
+        - Manufacturer
+        - Report
+        - Recall
+        - MediProofStats
+      abis:
+        - name: MediProof
+          file: ./abis/MediProof.json
+      eventHandlers:
+        - event: ManufacturerRegistered(indexed address,string,string,uint256)
+          handler: handleManufacturerRegistered
+        - event: BatchRegistered(indexed string,indexed address,string,uint256,uint256)
+          handler: handleBatchRegistered
+        - event: BatchReported(indexed string,indexed address,string,uint256)
+          handler: handleBatchReported
+        - event: BatchRecalled(indexed string,indexed address,uint256)
+          handler: handleBatchRecalled
+        - event: BatchSuspicious(indexed string,uint256,uint256)
+          handler: handleBatchSuspicious
+      file: ./src/mappings.ts

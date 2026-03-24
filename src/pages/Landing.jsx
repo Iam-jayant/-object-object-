@@ -56,7 +56,7 @@ export default function Landing() {
   }));
 
   return (
-    <div className="min-h-screen w-full xl:w-[75%] mx-auto">
+    <div className="min-h-screen w-full">
 
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative pt-28 pb-36 px-4 text-center overflow-hidden">

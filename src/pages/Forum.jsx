@@ -124,7 +124,7 @@ export default function Forum() {
   }
 
   return (
-    <div className="w-full xl:w-[75%] mx-auto px-6 py-12">
+    <div className="w-full px-6 py-12">
       <div className="mb-8">
         <h1 className="section-title mb-1">{t('forum_title')}</h1>
         <p className="text-surface-500 text-sm">{t('forum_sub')}</p>

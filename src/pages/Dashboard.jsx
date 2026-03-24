@@ -704,7 +704,7 @@ export default function Dashboard() {
 
   if (!account) {
     return (
-      <div className="w-full xl:w-[75%] mx-auto px-6 py-24 text-center">
+      <div className="w-full px-6 py-24 text-center">
         <div className="w-14 h-14 bg-primary-600/10 border border-primary-500/20 rounded-2xl flex items-center justify-center mx-auto mb-5">
           <Building2 size={28} className="text-primary-400" />
         </div>
@@ -725,7 +725,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="w-full xl:w-[75%] mx-auto px-6 py-12">
+    <div className="w-full px-6 py-12">
       <div className="mb-8">
         <h1 className="section-title mb-1">{t('dash_title')}</h1>
         <p className="text-surface-400 text-sm">{t('dash_sub')}</p>

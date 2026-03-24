@@ -157,7 +157,7 @@ export default function Analytics() {
   useEffect(() => { load(); }, []);
 
   return (
-    <div className="w-full xl:w-[75%] mx-auto px-6 py-12">
+    <div className="w-full px-6 py-12">
       {/* Header */}
       <div className="flex items-start justify-between mb-8 gap-4 flex-wrap">
         <div>

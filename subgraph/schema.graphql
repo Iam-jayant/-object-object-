@@ -1,0 +1,44 @@
+type Batch @entity(immutable: false) {
+  id: ID!                   # batchId
+  manufacturer: Manufacturer!
+  ipfsHash: String!
+  expiryDate: BigInt!
+  isRecalled: Boolean!
+  createdAt: BigInt!
+  reportCount: Int!
+  isSuspicious: Boolean!
+  reports: [Report!]! @derivedFrom(field: "batch")
+}
+
+type Manufacturer @entity(immutable: false) {
+  id: ID!           # wallet address
+  name: String!
+  licenseNumber: String!
+  registeredAt: BigInt!
+  batches: [Batch!]! @derivedFrom(field: "manufacturer")
+  totalBatches: Int!
+}
+
+type Report @entity(immutable: true) {
+  id: ID!           # batchId-reporter-timestamp
+  batch: Batch!
+  reporter: Bytes!
+  reason: String!
+  timestamp: BigInt!
+}
+
+type Recall @entity(immutable: true) {
+  id: ID!
+  batch: Batch!
+  manufacturer: Bytes!
+  timestamp: BigInt!
+}
+
+type MediProofStats @entity(immutable: false) {
+  id: ID!           # "global"
+  totalBatches: Int!
+  totalManufacturers: Int!
+  totalReports: Int!
+  totalRecalls: Int!
+  suspiciousBatches: Int!
+}
